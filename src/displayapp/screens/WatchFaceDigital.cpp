@@ -131,14 +131,14 @@ void WatchFaceDigital::Refresh() {
       uint8_t day = dateTimeController.Day();
       if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24) {
         lv_label_set_text_fmt(label_date,
-                              "%s %d %s, %d",
+                              "%s %d%s, %d",
                               dateTimeController.DayOfWeekShortToString(),
                               day,
                               dateTimeController.MonthShortToString(),
                               year);
       } else {
         lv_label_set_text_fmt(label_date,
-                              "%s %s %d, %d",
+                              "%s %s%d, %d",
                               dateTimeController.DayOfWeekShortToString(),
                               dateTimeController.MonthShortToString(),
                               day,
